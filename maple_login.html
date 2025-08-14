@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head>
+	<link rel="stylesheet" href="maple.css">
+	<link rel="stylesheet" href="maple2ddpx.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<link rel="shortcut icon" href="http://ibsg.redtag.ca/portal/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="http://ibsg.redtag.ca/portal/images/favicon.ico" type="image/x-icon">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<title>Maple QA</title>
+	<script type="text/javascript">
+
+		function initialize() {
+			var txtObj = document.getElementById('txtLogin');
+			if (txtObj.value.length != 0) {
+				var chkObj = document.getElementById('chkRemember');
+				var pwdObj = document.getElementById('txtPasswd');
+				chkObj.checked = true;
+				pwdObj.focus();
+			} else {
+				txtObj.focus();
+			}
+		}
+
+		function goCheck() {
+			var reqForm = document.forms[0];
+			var reqCheck = document.getElementById('reqCheck');
+			reqCheck.value = "true";
+			reqForm.submit();
+		}
+
+		function goUsage() {
+			location.assign('/user');
+		}
+
+	</script>
+</head>
+
+<body onload="javascript:initialize();">
+	<div id="container">
+
+		
+		<div id="login">
+			<section class="logo">
+				<img src="images/mapleQAred.png" alt="Maple QA logo">
+			</section>
+
+			<section class="account">
+
+				<div class="input-title">
+					Wireless Access Login
+				</div>
+				<form method="post" enctype="application/x-www-form-urlencoded"
+					  action="%authproto://%authaddr/portal/user-authen.php">
+					<div class="input-group">
+						<input name="txtLogin" type="text" id="txtLogin" maxlength="20" value="" placeholder=" ">
+						<label for="txtLogin">Username</label>
+					</div>
+
+					<div class="input-group">
+						<input name="txtPasswd" type="password" id="txtPasswd" maxlength="20" value="" placeholder=" ">
+						<label for="txtPasswd">Password</label>
+					</div>
+
+					<div class="remember"><input name="chkRemember" id="chkRemember" type="checkbox" value="1"> Remember Me</div>
+
+					<div class="buttons">
+						<input name="btnLogin" type="submit" id="btnLogin" value="Login" onsubmit="this.disabled=true">
+						<input name="btnCheck" type="button" id="btnCheck" value="Check" onclick="goCheck();">
+						<input name="btnUsage" type="button" id="btnUsage" value="Usage" disabled onclick="goUsage();">
+						<input name="reqUrl" type="hidden" id="reqUrl" value="http://www.google.co.th">
+						<input name="reqCheck" type="hidden" id="reqCheck" value="false">
+					</div>
+				</form>
+
+			</section>
+
+			<section>
+			</section>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

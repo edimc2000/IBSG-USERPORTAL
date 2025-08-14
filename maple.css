@@ -1,0 +1,164 @@
+#container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/winnipeg.jpg");
+    background-size: 2300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+
+.logo {
+    margin: auto;
+}
+
+.logo img {
+    height: 90px;
+}
+
+.error {
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+    text-align: center;
+    padding: 50px;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 100%;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: thin;
+    padding: 50px;
+    color: #ffffff;
+    /* Glass effect styles */
+    background: rgba(0, 0, 0, 0.1);
+    /* Semi-transparent white */
+    backdrop-filter: blur(8px);
+    /* Frosted blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* Light border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+}
+
+.input-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: xx-large;
+    padding: 50px 0 20px 0;
+    font-weight: 500;
+    /* letter-spacing: 0.2rem; */
+    margin: auto;
+    text-align: center;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+
+.remember {
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+    padding: 50px 0 0 20px;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    padding: 50px 0;
+    gap: 30px;
+    justify-content: center;
+}
+
+.buttons>* {
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+    width: 25%;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #dbe1e3;
+    border-color: #dbe1e3;
+}
+
+
+.buttons:hover [name^="btn"]:not(:hover) {
+    background-color: #74c476;
+    border-color: #74c476;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    transition: all 1s ease;
+}
+
+[name^="btn"]:hover {
+    background-color: #005a32;
+    border-color: #005a32;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+
+.input-group {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    margin: 30px 0;
+}
+
+.input-group input {
+    width: 90%;
+    padding: 15px;
+    border: 1px solid rgb(148, 148, 148, 0.9);
+    border-radius: 10px;
+    background-color: rgb(234, 231, 230) !important;
+    z-index: 1;
+    text-indent: 25px;
+}
+
+[id^="txt"] {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem !important;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    padding: 0 5px;
+    background: rgb(234, 231, 230);
+    z-index: 2;
+    border-color: #414141;
+
+}
+
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 500;
+    color: #000000;
+    background: rgb(234, 231, 230);
+    text-transform: uppercase;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+
+}
+
+
+.input-group input:focus {
+    /* border-color: #007bff; */
+    outline: none;
+}

@@ -1,0 +1,75 @@
+@media only screen and (max-width: 600px), (min-resolution: 2dppx) {
+    body {
+        margin: 0;
+    }
+
+    #container {
+        background-image: url("images/winnipeg.jpg");
+        background-size: 3500px;
+        background-position: bottom 0% right 15%;
+        
+    }
+
+    #login {
+        width: 75%;
+        height: 100%;
+        padding: 200px 50px;
+        color: #ffffff;
+        background: rgba(0, 0, 0, 0.30);
+        border-radius: 50px;
+        
+    }
+
+    .input-title {
+        font-size: xxx-large;
+    }
+
+.error {
+ font-size: xxx-large;
+
+}
+    .logo img {
+        height: 50%;
+    }
+
+    .remember {
+        font-size: xx-large;
+    }
+
+    .buttons>* {
+        font-size: xx-large;
+        width: 25%;
+        height: 65px;
+        border-radius: 15px;
+    }
+
+    #chkRemember {
+        transform: scale(2.5);
+        margin-right: 20px;
+    }
+
+    [id^="txt"] {
+        color: rgb(24, 24, 24);
+        height: 50px;
+        font-size: 3rem !important;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .input-group label {
+        font-size: 2rem !important;
+        text-indent: 2rem;
+    }
+
+    .input-group {
+        margin: 60px 0;
+    }
+
+    .input-group input:focus+label,
+    .input-group input:not(:placeholder-shown)+label {
+        transform: translateY(-80%);
+        border-radius: 10px;
+        padding-right: 50px;
+    }
+
+
+}

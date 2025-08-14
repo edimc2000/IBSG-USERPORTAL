@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<title>%title :: Login Fail</title>
+	<link rel="stylesheet" href="maple.css">
+	<link rel="stylesheet" href="maple2ddpx.css">
+	<script type="text/javascript">
+		function goToPreviousPage() {
+			window.history.back();
+		}
+	</script>
+</head>
+
+<body onload="javascript:focus();">
+	<!-- <div id="wrapper">
+		<div id="topLogo"><img src="images/toplogo.jpg" alt="toplogo" /></div>
+		<div id="content">
+			<div id="leftLogo"></div>
+			<h1>Login Fail</h1>
+			<hr />
+			<p>%error</p>
+		</div>
+		<div id="formbar">
+			<input name="btnRetry" type="button" id="btnRetry" value="Retry" onclick="javascript:retry();" />
+		</div>
+		<div id="footer">%footer</div>
+		<div><img src="images/shadow.png" width="720" height="6" alt="shadow" /></div>
+	</div> -->
+
+	<div id="container">
+
+		<div id="login">
+			<section class="logo">
+				<img src="images/mapleQAred.png" height="90px" alt="Maple QA logo">
+			</section>
+			<div class="input-title">
+				Failed to Login
+			</div>
+			<section class="error">
+				There is a problem with your account.
+			</section>
+
+			<section>
+				<div class="buttons">
+					<input name="btnRetry" type="button" id="btnRetry" value="Retry" onclick="goToPreviousPage()" />
+				</div>
+			</section>
+			<section>
+			</section>
+		</div>
+	</div>
+
+	
+</body>
+
+</html>
