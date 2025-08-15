@@ -47,32 +47,32 @@
 		
 		<div id="login">
 			<section class="logo">
-				<img src="images/mapleQAred.png" alt="Maple QA logo">
+				<img data-testid= "imageLogo" src="images/mapleQAred.png" alt="Maple QA logo">
 			</section>
 
 			<section class="account">
 
-				<div class="input-title">
+				<div data-testid= "textTitle" class="input-title">
 					Wireless Access Login
 				</div>
 				<form method="post" enctype="application/x-www-form-urlencoded"
 					  action="%authproto://%authaddr/portal/user-authen.php">
 					<div class="input-group">
-						<input name="txtLogin" type="text" id="txtLogin" maxlength="20" value="" placeholder=" ">
-						<label for="txtLogin">Username</label>
+						<input name="txtLogin" data-testid= "fieldUsername" type="text" id="txtLogin" maxlength="20" value="" placeholder=" ">
+						<label for="txtLogin" data-testid= "labelUsername">Username</label>
 					</div>
 
 					<div class="input-group">
-						<input name="txtPasswd" type="password" id="txtPasswd" maxlength="20" value="" placeholder=" ">
-						<label for="txtPasswd">Password</label>
+						<input name="txtPasswd" data-testid= "fieldpassword" type="password" id="txtPasswd" maxlength="20" value="" placeholder=" ">
+						<label for="txtPasswd" data-testid= "labelpassword">Password</label>
 					</div>
 
-					<div class="remember"><input name="chkRemember" id="chkRemember" type="checkbox" value="1"> Remember Me</div>
+					<div class="remember"><input name="chkRemember" data-testid= "checkRemember" id="chkRemember" type="checkbox" value="1"> Remember Me</div>
 
 					<div class="buttons">
-						<input name="btnLogin" type="submit" id="btnLogin" value="Login" onsubmit="this.disabled=true">
-						<input name="btnCheck" type="button" id="btnCheck" value="Check" onclick="goCheck();">
-						<input name="btnUsage" type="button" id="btnUsage" value="Usage" disabled onclick="goUsage();">
+						<input name="btnLogin" data-testid= "buttonLogin" type="submit" id="btnLogin" value="Login" onsubmit="this.disabled=true">
+						<input name="btnCheck" data-testid= "buttonCheck" type="button" id="btnCheck" value="Check" onclick="goCheck();">
+						<input name="btnUsage" data-testid= "buttonUsage" type="button" id="btnUsage" value="Usage" disabled onclick="goUsage();">
 						<input name="reqUrl" type="hidden" id="reqUrl" value="http://www.google.co.th">
 						<input name="reqCheck" type="hidden" id="reqCheck" value="false">
 					</div>

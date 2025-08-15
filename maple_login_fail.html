@@ -36,18 +36,18 @@
 
 		<div id="login">
 			<section class="logo">
-				<img src="images/mapleQAred.png" height="90px" alt="Maple QA logo">
+				<img data-testid= "imageLogo" src="images/mapleQAred.png" height="90px" alt="Maple QA logo">
 			</section>
-			<div class="input-title">
+			<div data-testid= "errorTitle" class="input-title">
 				Failed to Login
 			</div>
-			<section class="error">
+			<section data-testid= "errorMessage" class="error">
 				There is a problem with your account.
 			</section>
 
 			<section>
 				<div class="buttons">
-					<input name="btnRetry" type="button" id="btnRetry" value="Retry" onclick="goToPreviousPage()" />
+					<input name="btnRetry" data-testid= "buttonRetry" type="button" id="btnRetry" value="Retry" onclick="goToPreviousPage()" />
 				</div>
 			</section>
 			<section>
